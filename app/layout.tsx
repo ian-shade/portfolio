@@ -12,7 +12,7 @@ export const metadata = {
   title: "Ian Shade | AI Engineer",
   description: "AI Engineer specializing in machine learning and artificial intelligence.",
   icons: {
-    icon: "/Ian_profile.jpg",
+    icon: "/laptop-icon.svg",
   },
   openGraph: {
     type: "website",
