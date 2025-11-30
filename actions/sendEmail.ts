@@ -10,6 +10,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
+  const assetUrl = formData.get("assetUrl");
 
   if (!validateString(senderEmail, 500)) {
     return {
@@ -23,6 +24,11 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
+  const formattedAssetUrl =
+    assetUrl && typeof assetUrl === "string" && validateString(assetUrl, 2000)
+      ? assetUrl
+      : null;
+
   let data;
   try {
     data = await resend.emails.send({
@@ -33,6 +39,7 @@ export const sendEmail = async (formData: FormData) => {
       react: React.createElement(ContactFormEmail, {
         message: message,
         senderEmail: senderEmail,
+        assetUrl: formattedAssetUrl ?? undefined,
       }),
     });
   } catch (error: unknown) {

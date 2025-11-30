@@ -9,17 +9,20 @@ import {
   Preview,
   Section,
   Text,
+  Link,
 } from "@react-email/components";
 import { Tailwind } from "@react-email/tailwind";
 
 type ContactFormEmailProps = {
   message: string;
   senderEmail: string;
+  assetUrl?: string;
 };
 
 export default function ContactFormEmail({
   message,
   senderEmail,
+  assetUrl,
 }: ContactFormEmailProps) {
   return (
     <Html>
@@ -33,6 +36,11 @@ export default function ContactFormEmail({
                 You received the following message from the contact form
               </Heading>
               <Text>{message}</Text>
+              {assetUrl ? (
+                <Text className="mt-2">
+                  Uploaded asset: <Link href={assetUrl}>{assetUrl}</Link>
+                </Text>
+              ) : null}
               <Hr />
               <Text>The sender's email is: {senderEmail}</Text>
             </Section>
