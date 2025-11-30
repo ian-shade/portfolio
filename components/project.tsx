@@ -7,6 +7,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import { AiFillGithub, AiFillYoutube } from "react-icons/ai";
 import { Icon } from "@iconify/react";
 import ProjectModal from "./project-modal";
+import { useProjectModalContext } from "@/context/project-modal-context";
 
 type ProjectProps = {
   title: string;
@@ -35,6 +36,17 @@ export default function Project({
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { setIsProjectModalOpen } = useProjectModalContext();
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+    setIsProjectModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setIsProjectModalOpen(false);
+  };
 
   return (
     <>
@@ -43,7 +55,7 @@ export default function Project({
         className="group mb-3 sm:mb-8 last:mb-0"
       >
         <section
-          onClick={() => setIsModalOpen(true)}
+          onClick={handleOpenModal}
           className="bg-gray-100 max-w-[75rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative lg:min-h-[21rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 cursor-pointer"
         >
         <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[45%] flex flex-col h-full">
@@ -138,7 +150,7 @@ export default function Project({
 
     <ProjectModal
       isOpen={isModalOpen}
-      onClose={() => setIsModalOpen(false)}
+      onClose={handleCloseModal}
       title={title}
       description={description}
       tags={tags}

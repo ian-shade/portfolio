@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import { Nunito } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import ProjectModalContextProvider from "@/context/project-modal-context";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
@@ -49,10 +50,12 @@ export default function RootLayout({
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
-            {children}
+            <ProjectModalContextProvider>
+              <Header />
+              {children}
 
-            <Toaster position="top-right" />
+              <Toaster position="top-right" />
+            </ProjectModalContextProvider>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
