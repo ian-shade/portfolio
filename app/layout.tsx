@@ -10,6 +10,31 @@ const nunito = Nunito({ subsets: ["latin"] });
 export const metadata = {
   title: "Ian Shade | AI Engineer",
   description: "AI Engineer specializing in machine learning and artificial intelligence.",
+  icons: {
+    icon: "/Ian_profile.jpg",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://ianshade.com",
+    siteName: "Ian Shade Portfolio",
+    title: "Ian Shade | AI Engineer",
+    description: "AI Engineer specializing in machine learning and artificial intelligence.",
+    images: [
+      {
+        url: "/Ian_profile.jpg",
+        width: 800,
+        height: 800,
+        alt: "Ian Shade - AI Engineer",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ian Shade | AI Engineer",
+    description: "AI Engineer specializing in machine learning and artificial intelligence.",
+    images: ["/Ian_profile.jpg"],
+  },
 };
 
 export default function RootLayout({
