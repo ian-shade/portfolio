@@ -21,7 +21,7 @@ export const metadata = {
     description: "AI Engineer specializing in machine learning and artificial intelligence.",
     images: [
       {
-        url: "/Ian_profile.jpg",
+        url: "https://ianshade.com/Ian_profile.jpg",
         width: 800,
         height: 800,
         alt: "Ian Shade - AI Engineer",
@@ -33,7 +33,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Ian Shade | AI Engineer",
     description: "AI Engineer specializing in machine learning and artificial intelligence.",
-    images: ["/Ian_profile.jpg"],
+    images: ["https://ianshade.com/Ian_profile.jpg"],
   },
 };
 
