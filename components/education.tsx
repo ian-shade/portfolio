@@ -5,7 +5,7 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import damaLogo from "@/public/dama_logo.jpg";
-import mmuLogo from "@/public/mmu_logo.jpg";
+import mmuLogo from "@/public/dama_logo.jpg";
 import Image from "next/image";
 
 export default function Education() {
