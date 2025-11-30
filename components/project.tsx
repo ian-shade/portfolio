@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { BiLinkExternal } from "react-icons/bi";
 import { AiFillGithub, AiFillYoutube } from "react-icons/ai";
 import { Icon } from "@iconify/react";
+import ProjectModal from "./project-modal";
 
 type ProjectProps = {
   title: string;
@@ -16,6 +17,8 @@ type ProjectProps = {
   githubLink?: string;
   demoLink?: string;
   urlLink?: string;
+  appStoreLink?: string;
+  playStoreLink?: string;
 };
 
 export default function Project({
@@ -27,16 +30,23 @@ export default function Project({
   githubLink,
   demoLink,
   urlLink,
+  appStoreLink,
+  playStoreLink,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <motion.div
-      ref={ref}
-      className="group mb-3 sm:mb-8 last:mb-0"
-    >
-      <section className="bg-gray-100 max-w-[58rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative lg:min-h-[21rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col h-full">
+    <>
+      <motion.div
+        ref={ref}
+        className="group mb-3 sm:mb-8 last:mb-0"
+      >
+        <section
+          onClick={() => setIsModalOpen(true)}
+          className="bg-gray-100 max-w-[75rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative lg:min-h-[21rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 cursor-pointer"
+        >
+        <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[45%] flex flex-col h-full">
           <h3 className="text-2xl font-semibold mb-4">{title}</h3>
           <ul className="flex flex-wrap gap-2 mb-3 sm:mt-auto">
             <p className="font-bold text-gray-500 dark:text-white/70">
@@ -55,7 +65,7 @@ export default function Project({
                 href={urlLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"
+                className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-lg hover:scale-105"
               >
                 <BiLinkExternal className="mr-1" /> Live
               </a>
@@ -66,9 +76,9 @@ export default function Project({
                 href={demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"
+                className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-lg hover:scale-105"
               >
-                <AiFillYoutube className="mr-1" /> Demo
+                <BiLinkExternal className="mr-1" /> Website
               </a>
             )}
 
@@ -77,10 +87,34 @@ export default function Project({
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center border border-[#111827] py-2 px-4 rounded-full mr-2 text-[#111827] hover:scale-105 dark:border-white dark:text-white dark:border-opacity-40"
+                className="flex items-center border border-[#111827] py-2 px-4 rounded-lg mr-2 text-[#111827] hover:scale-105 dark:border-white dark:text-white dark:border-opacity-40"
               >
                 <AiFillGithub className="mr-1 opacity-70" />{" "}
                 <span className="opacity-70">GitHub</span>
+              </a>
+            )}
+
+            {appStoreLink && (
+              <a
+                href={appStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-lg hover:scale-105"
+              >
+                <Icon icon="ic:baseline-apple" className="mr-1 text-xl" />
+                App Store
+              </a>
+            )}
+
+            {playStoreLink && (
+              <a
+                href={playStoreLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-lg hover:scale-105"
+              >
+                <Icon icon="logos:google-play-icon" className="mr-1 text-xl" />
+                Play Store
               </a>
             )}
           </div>
@@ -90,12 +124,32 @@ export default function Project({
           src={imageUrl}
           alt="Project I worked on"
           quality={95}
-          className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0]
+          className="absolute hidden lg:block top-8 right-0 w-[52%] h-[calc(100%-4rem)] rounded shadow-2xl
           transition
-          lg:scale-[1.1]
+          group-hover:scale-[1.04]
+          group-hover:-translate-x-3
+          group-hover:translate-y-3
+          group-hover:-rotate-2
+          object-cover object-top
           "
         />
       </section>
     </motion.div>
+
+    <ProjectModal
+      isOpen={isModalOpen}
+      onClose={() => setIsModalOpen(false)}
+      title={title}
+      description={description}
+      tags={tags}
+      icons={icons}
+      imageUrl={imageUrl}
+      githubLink={githubLink}
+      demoLink={demoLink}
+      urlLink={urlLink}
+      appStoreLink={appStoreLink}
+      playStoreLink={playStoreLink}
+    />
+    </>
   );
 }

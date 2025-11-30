@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import ParticleContainer from "./particle-container";
-import githubdp from "@/public/githubdp.jpg";
+import profileImage from "@/public/Ian_profile.jpg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -32,13 +32,13 @@ export default function Intro() {
             }}
           >
             <Image
-              src={githubdp}
-              alt="Ricardo portrait"
+              src={profileImage}
+              alt="Ian Shade portrait"
               width="192"
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-64 w-64 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -59,13 +59,13 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-0 sm:px-4 text-2xl font-medium !leading-[1.5] sm:text-3xl text-white max-w-[50rem] mx-auto"
+        className="mb-10 mt-4 px-0 sm:px-4 text-xl font-medium !leading-[1.5] sm:text-2xl text-white max-w-[50rem] mx-auto"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ben.</span> I'm a{" "}
-        <span className="font-bold">software engineer</span> at{" "}
-        <a href="https://www.humanforce.com" className="font-bold underline" target='_blank' style={{ textUnderlineOffset: '4px' }}>Humanforce</a> in the platform team. I build and maintain full-stack systems from modern frontends to event-driven backends and infrastructure — with a focus on performance, scalability, and developer experience.
+        <span className="font-bold">Hello, I'm Ian.</span> I'm an{" "}
+        <span className="font-bold">AI Engineer and Software Engineer</span> with 5+ years of experience developing intelligent systems and full-stack applications. Currently pursuing my{" "}
+        <span className="font-bold">Master's in Artificial Intelligence</span> at Manchester Metropolitan University. WRO World Finalist, passionate about applying AI/ML to real-world challenges and building scalable solutions.
       </motion.h1>
 
       <motion.div
@@ -78,7 +78,7 @@ export default function Intro() {
       >
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack text-gray-950"
-          href="https://github.com/ben04rogers"
+          href="https://github.com/ian-shade"
           target="_blank"
         >
           GitHub <FaGithub className="opacity-70" />
@@ -86,7 +86,7 @@ export default function Intro() {
 
         <a
           className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
-          href="https://www.linkedin.com/in/ben-rogers-dev/"
+          href="https://www.linkedin.com/in/ian-shade/"
           target="_blank"
         >
           <span className="opacity-70">LinkedIn</span>

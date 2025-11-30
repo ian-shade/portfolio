@@ -1,15 +1,11 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import cryptoCrowdImg from "@/public/cryptocrowd2.png";
-import ozdevsImg from "@/public/ozdevs-two.png";
-import assetTradingImg from "@/public/asset-trading.jpg";
-import euphorusImg from "@/public/euphorus-two.png";
-import euphorusBackendImg from "@/public/euphorus-backend.png";
-import techprowlImg from "@/public/techprowl-two.png";
-import taskManagerImg from "@/public/task-manager.png";
-import familyTreeImg from "@/public/bfsproject.jpg";
-import binaryGameImg from "@/public//binary-game.png";
 import wajLogo from "@/public/waj_logo.webp";
+import wajAppImg from "@/public/waj_app.webp";
+import roadRideImg from "@/public/roadride.jpeg";
+import aboAppImg from "@/public/abo_app.jpeg";
+import waselAppImg from "@/public/wasel_app.jpeg";
+import rocketyImg from "@/public/rocket_simultation_app.png";
 import chamBank from "@/public/cham-bank.webp";
 import softLogo from "@/public/90soft.webp";
 import shamUni from "@/public/sham-uni.webp";
@@ -82,82 +78,86 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Developer Job Matching Portal",
+    title: "WAJ - All-in-One Salon Management System",
     description:
-      "Reverse Job board for companies looking to hire developers in Australia. Filter by experience, location and keyboards.  Companies can pay a monthly fee to be able to message developers on the site and view their information.",
-    tags: ["PHP", "Laravel", "JavaScript", "Tailwind", "MySQL"],
+      "Comprehensive salon and beauty business management platform with customer booking, staff scheduling, inventory management, and payment processing. Spearheaded development of the booking platform, migrated infrastructure to cloud reducing costs by 55%, and optimized app speed by 60%. Available on web, iOS, and Android.",
+    tags: ["Node.js", "NestJS", "Flutter", "PostgreSQL", "TypeScript", "Docker", "AWS"],
     icons: [
-      "logos:laravel",
-      "logos:php",
-      "logos:javascript",
-      "devicon:tailwindcss",
-      "logos:mysql",
-    ],
-    imageUrl: ozdevsImg,
-    githubLink: "https://github.com/ben04rogers/ozdevs-v2",
-  },
-  {
-    title: "Crypto Sentiment Analysis",
-    description:
-      "Cryptocurrency sentiment analysis website based on Twitter posts. Users can see the overall sentiment (positive, negative or neutral) of different Cryptocurrencies based on what people are currently posting on Twitter. Users can also see keywords and an average sentiment score. Stateless application that uses Elasticache and S3 on AWS. It also used EC2 and auto-scaling to manage demand.",
-    tags: ["JavaScript", "React", "Express.js", "AWS"],
-    icons: [
+      "logos:nodejs-icon",
+      "logos:nestjs",
+      "logos:flutter",
+      "logos:postgresql",
+      "logos:typescript-icon",
+      "logos:docker-icon",
       "logos:aws",
-      "logos:javascript",
-      "logos:react",
-      "logos:bootstrap",
-      "logos:express",
     ],
-    imageUrl: cryptoCrowdImg,
-    githubLink: "https://github.com/ben04rogers/cab432-assignment-2",
-    demoLink: "https://www.youtube.com/watch?v=uhyC0M4WIl4",
+    imageUrl: wajAppImg,
+    demoLink: "https://waj.ai/en",
+    appStoreLink: "https://apps.apple.com/ae/app/waj-all-in-one-salon-manager/id6471232991",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.wajapp.waj&hl=en_GB",
   },
   {
-    title: "Company Asset Trading",
+    title: "Road Ride - Cycling Social Platform",
     description:
-      "Client-server system written in Java for trading of virtual assets within departments of a company. Facilitated trades via a marketplace model where users can buy and sell assets. Admins of an organisation can create assets, users and modify details. Uses MariaDB as a database and Swing for the GUI.",
-    tags: ["Java", "MariaDB", "Swing"],
-    icons: ["logos:java", "logos:mariadb-icon"],
-    imageUrl: assetTradingImg,
-    githubLink: "https://github.com/ben04rogers/organisation-asset-trading",
+      "Professional cycling platform with 30K+ active users combining fitness tracking, social features, and marketplace. Users can track calories and distance, join group rides, browse cycling news, buy/sell bikes, compete on leaderboards, and earn badges. Built with zero downtime architecture that has served the community for 3+ years with no critical issues.",
+    tags: ["Flutter", "Node.js", "PostgreSQL", "REST APIs", "Firebase", "Google Maps API"],
+    icons: [
+      "logos:flutter",
+      "logos:nodejs-icon",
+      "logos:postgresql",
+      "logos:firebase",
+      "devicon:googlecloud",
+    ],
+    imageUrl: roadRideImg,
+    appStoreLink: "https://apps.apple.com/hr/app/road-ride-team/id6444900415",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.soft.road_ride&hl=en_GB",
   },
   {
-    title: "Computer Auction",
+    title: "ABO Store - E-Commerce Platform",
     description:
-      "Computer auction application built with Flask. The site allows users to register, bid on items, leave reviews, post new listings, manage listings, search by keyword, and keep a watch list. ",
-    tags: ["Python", "Flask", "Bootstrap", "SQLite"],
-    icons: ["logos:python", "logos:bootstrap", "logos:sqlite"],
-    imageUrl: techprowlImg,
-    githubLink: "https://github.com/ben04rogers/computer-auction",
+      "Comprehensive e-commerce platform serving 30K+ active users in the Iraqi market, specializing in home furnishings, apparel, and lifestyle products. Features include product browsing with variant selection, inventory management, wish lists, personalized recommendations, and seamless shopping experience. Available on web, iOS, and Android platforms.",
+    tags: ["Flutter", "Node.js", "PostgreSQL", "REST APIs", "Firebase"],
+    icons: [
+      "logos:flutter",
+      "logos:nodejs-icon",
+      "logos:postgresql",
+      "logos:firebase",
+    ],
+    imageUrl: aboAppImg,
+    demoLink: "https://abostoreiq.com/",
+    appStoreLink: "https://apps.apple.com/hr/app/abo-store/id6444841672",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.soft.ABO&hl=en_GB",
   },
   {
-    title: "Task Manager Console App",
+    title: "Klshi Wasel - Delivery & Logistics Platform",
     description:
-      "Console app that manages tasks in a project. Users can load projects from a file and generate a seqeuence to complete them in, based on each task's dependencies. Users can also find earliest possible commencement time of each task, add new tasks, update tasks, remove tasks, and save the results to a text file.",
-    tags: ["C#"],
-    icons: ["devicon:csharp"],
-    imageUrl: taskManagerImg,
-    githubLink: "https://github.com/ben04rogers/task-manager",
+      "Multi-purpose delivery platform serving 7K+ active users, combining e-commerce fulfillment with general logistics services. Users can purchase products from partner stores and arrange pickup/delivery, or request item transportation services between locations. Features real-time tracking, flexible scheduling, and comprehensive order management for seamless delivery experiences.",
+    tags: ["Flutter", "Node.js", "PostgreSQL", "Firebase", "Google Maps API"],
+    icons: [
+      "logos:flutter",
+      "logos:nodejs-icon",
+      "logos:postgresql",
+      "logos:firebase",
+      "devicon:googlecloud",
+    ],
+    imageUrl: waselAppImg,
+    appStoreLink: "https://apps.apple.com/hr/app/klshi-wasel-%D9%88%D8%A7%D8%B5%D9%84/id6736594065",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.ixcoders.wasel&hl=en_GB",
   },
-  // {
-  //   title: "Family Tree Relationship Path Finder",
-  //   description:
-  //     "Python program that computes the shortest paths in a family tree using a breadth-first search algorithm. Problem was to calculate the shortest path from a starting vertex in a graph to each other vertex. The vertices represent people and each person is related to every other person through parent-child relationships. A person can see how they are related to each other person in the tree",
-  //   tags: ["Python"],
-  //   icons: ["logos:python"],
-  //   imageUrl: familyTreeImg,
-  //   githubLink: "https://github.com/ben04rogers/breadth-first-search",
-  //   demoLink: "https://www.youtube.com/watch?v=VXCZKsqupxA",
-  // },
   {
-    title: "Arduino Binary Game",
+    title: "Rockety - 3D Rocket Physics Simulator",
     description:
-      "Binary game written in C that runs on an Arduino Uno using Tinkercad. The game aims to help users learn binary by challenging them to input different integers in their binary form within a time limit.",
-    tags: ["C"],
-    icons: ["devicon:c"],
-    imageUrl: binaryGameImg,
-    githubLink: "https://github.com/ben04rogers/binary-game-microcontroller",
-    demoLink: "https://www.youtube.com/watch?v=A6n6XDk4Unw&feature=youtu.be",
+      "Interactive 3D rocket simulation demonstrating realistic physics principles through an engaging web experience. Features adjustable thrust and launch angle controls, real-time physics calculations, detailed 3D rocket model with textures and lighting, and educational content explaining rocket flight mechanics. Built with Three.js for immersive 3D graphics and accurate aerodynamic modeling.",
+    tags: ["JavaScript", "Three.js", "HTML", "CSS", "Physics Engine"],
+    icons: [
+      "logos:javascript",
+      "logos:threejs",
+      "logos:html-5",
+      "logos:css-3",
+    ],
+    imageUrl: rocketyImg,
+    urlLink: "https://resonant-tanuki-42ae82.netlify.app/",
+    githubLink: "https://github.com/ian-shade/Rockety",
   },
 ] as const;
 
