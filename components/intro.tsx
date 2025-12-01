@@ -58,15 +58,17 @@ export default function Intro() {
         </div>
       </div>
 
-      <motion.h1
-        className="mb-10 mt-4 px-0 sm:px-4 text-xl font-medium !leading-[1.5] sm:text-2xl text-white max-w-[50rem] mx-auto"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, I'm Ian.</span> I'm an{" "}
-        <span className="font-bold">AI Engineer and Software Engineer</span> with 5+ years of experience developing intelligent systems and full-stack applications. Currently pursuing my{" "}
-        <span className="font-bold">Master's in Artificial Intelligence</span> at Manchester Metropolitan University. WRO World Finalist, passionate about applying AI/ML to real-world challenges and building scalable solutions.
-      </motion.h1>
+<motion.h1
+  className="mb-10 mt-4 px-0 sm:px-4 text-xl font-medium !leading-[1.5] sm:text-2xl text-white max-w-[50rem] mx-auto"
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+>
+  AI & Software Engineer with 5+ years experience <br />
+  Master’s in Artificial Intelligence <br />
+  Built apps impacting 100k+ users <br />
+  WRO World Finalist <br />
+</motion.h1>
+
 
       <motion.div
         className="flex flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
