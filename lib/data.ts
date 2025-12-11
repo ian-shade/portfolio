@@ -48,10 +48,10 @@ export const experiencesData = [
     logo: wajLogo // You'll need to add this image
   },
   {
-    title: "Team Lead",
+    title: "Data Scientist",
     location: "AL-Cham Bank (Banking System) - Dubai, UAE",
     description:
-      "Led a high-performing team of 5 developers, implementing Agile methodologies that increased development efficiency by 30%. Successfully managed the full project lifecycle and integrated 15+ new features into the mobile banking app, directly driving higher user engagement and customer satisfaction ratings.",
+      "Led a team of 5 developers in adopting data-driven development practices, utilizing analytics dashboards to track velocity and increase efficiency by 30%. Oversaw the integration of 15+ new features by leveraging A/B testing and user behavior analysis to validate hypotheses, ensuring data integrity for financial reporting and directly driving higher user engagement.",
     icon: React.createElement(CgWorkAlt),
     date: "July 2023 - January 2024",
     logo: chamBank // You'll need to add this image
