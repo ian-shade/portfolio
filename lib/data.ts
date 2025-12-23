@@ -161,7 +161,7 @@ export const projectsData = [
       "logos:css-3",
     ],
     imageUrl: rocketyImg,
-    urlLink: "https://resonant-tanuki-42ae82.netlify.app/",
+    urlLink: "https://rockety.ianshade.com/",
     githubLink: "https://github.com/ian-shade/Rockety",
   },
 ] as const;
