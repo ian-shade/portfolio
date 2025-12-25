@@ -63,9 +63,9 @@ export default function Intro() {
   initial={{ opacity: 0, y: 100 }}
   animate={{ opacity: 1, y: 0 }}
 >
-  AI & Software Engineer with 5+ years experience <br />
+  AI & Software Engineer with 6+ years experience <br />
   Master’s in Artificial Intelligence <br />
-  Built apps impacting 100k+ users <br />
+  Built apps impacting 200k+ users <br />
   WRO World Finalist <br />
 </motion.h1>
 
